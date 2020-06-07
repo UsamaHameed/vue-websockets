@@ -1,19 +1,26 @@
+<script src="https://unpkg.com/rxjs/bundles/rxjs.umd.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="../dist/vue-rx.js"></script>
+
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <PricesView />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Vue from "vue";
+import VueRx from "vue-rx";
+
+Vue.use(VueRx);
+
+import PricesView from "./components/PricesView.vue";
 
 export default Vue.extend({
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld,
-  },
+    PricesView
+  }
 });
 </script>
 
